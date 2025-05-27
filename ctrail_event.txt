@@ -1,0 +1,50 @@
+{
+    "eventVersion": "1.11",
+    "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDA6JKEX74TAUH7ALG5D",
+        "arn": "arn:aws:iam::982081077030:user/dwqed",
+        "userName": "dwqed",
+        "sessionContext": {
+            "attributes": {
+                "creationDate": "2025-05-27T01:44:37Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2025-05-27T09:07:14Z",
+    "eventSource": "s3.amazonaws.com",
+    "eventName": "CreateBucket",
+    "awsRegion": "ap-northeast-1",
+    "sourceIPAddress": "138.121.252.110",
+  
+    "requestParameters": {
+        "CreateBucketConfiguration": {
+            "LocationConstraint": "ap-northeast-1",
+            "xmlns": "http://s3.amazonaws.com/doc/2006-03-01/"
+        },
+        "bucketName": "mytest3-20260527",
+        "Host": "mytest3-20260527.s3.ap-northeast-1.amazonaws.com"
+    },
+    "responseElements": null,
+    "additionalEventData": {
+        "SignatureVersion": "SigV4",
+        "CipherSuite": "TLS_AES_128_GCM_SHA256",
+        "bytesTransferredIn": 196,
+        "AuthenticationMethod": "AuthHeader",
+        "x-amz-id-2": "RtZatz3ZTEDLuVhrfH9y+XfGfCjElANG1Q0qbXN0TCkvi+30JL+Ne+oP7KtUhRPSUAxf+tA63Np8O/xinam2mru2YOHY7iZ3k4Son8Rcbd0=",
+        "bytesTransferredOut": 0
+    },
+    "requestID": "XXMNBYV16A9ZS3QW",
+    "eventID": "bdc44486-ff6a-4d39-af04-aaaaeed01f1e",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "982081077030",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "mytest3-20260527.s3.ap-northeast-1.amazonaws.com"
+    }
+}
