@@ -10,6 +10,5 @@ resource "aws_sns_topic_subscription" "alert-me-email" {
 
 output "sns_topic_arn" {
   value = aws_sns_topic.alert-me.arn
-  
 }
 
