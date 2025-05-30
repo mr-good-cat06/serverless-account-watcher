@@ -1,4 +1,4 @@
-resource "aws_iam_role_policy" "lambda_policy_ssm_sns" {
+resource "aws_iam_role_policy" "lambda_policy_ssm_sns_cw" {
     name = "allow_lambda_ssm_policy"
     role = aws_iam_role.lambda_role.id
     policy = jsondecode({
@@ -17,6 +17,15 @@ resource "aws_iam_role_policy" "lambda_policy_ssm_sns" {
             ]      
             Effect = "Allow"
             Resource = aws_sns_topic.alert-me.arn
+            },
+            {
+            Action = [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ]      
+            Effect = "Allow"
+            Resource = "arn:aws:logs:*:*:*"
             }
         ]
     })
@@ -45,4 +54,9 @@ resource "aws_iam_policy_attachment" "lamba_ssm_sns" {
     roles = [aws_iam_role.lambda_role_ssm_sns.name]
     policy_arn = aws_iam_policy.lambda_policy_ssm_sns.arn
 }
+
+output "lamba_ssm_sns_role_arn" {
+    value = aws_iam_role.lambda_role_ssm_sns.arn
+}
+
 
