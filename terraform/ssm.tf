@@ -5,7 +5,7 @@ resource "aws_ssm_parameter" "slack-webhook-url" {
 }
 
 
-resource "aws_ssm_parameter" "sns=topic.arn" {
+resource "aws_ssm_parameter" "sns_topic_arn" {
     name = "/alerts/sns-topic-arn"
     type = "SecureString"
     value = "${aws_sns_topic.alert-me.arn}"
