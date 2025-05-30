@@ -18,6 +18,7 @@
     "awsRegion": "ap-northeast-1",
     "sourceIPAddress": "138.121.252.110",
   
+  
     "requestParameters": {
         "CreateBucketConfiguration": {
             "LocationConstraint": "ap-northeast-1",
