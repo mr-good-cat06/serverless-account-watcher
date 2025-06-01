@@ -1,7 +1,6 @@
-resource "aws_iam_role_policy" "lambda_policy_ssm_sns_cw" {
-    name = "allow_lambda_ssm_policy"
-    role = aws_iam_role.lambda_role.id
-    policy = jsondecode({
+resource "aws_iam_policy" "lambda_policy" {
+    name = "allow_lambda_ssm_policy" 
+    policy = jsonencode({
         Version = "2012-10-17"
         Statement = [
             {
@@ -32,7 +31,7 @@ resource "aws_iam_role_policy" "lambda_policy_ssm_sns_cw" {
 }
 
 
-resource "aws_iam_role" "lambda_role_ssm_sns" {
+resource "aws_iam_role" "lambda_role" {
     name = "lambda_role_ssm_sns"
     assume_role_policy = jsonencode({
         Version = "2012-10-17"
@@ -49,14 +48,10 @@ resource "aws_iam_role" "lambda_role_ssm_sns" {
     })
 }
 
-resource "aws_iam_policy_attachment" "lamba_ssm_sns" {
+resource "aws_iam_policy_attachment" "lamba_role_policy_attachment" {
     name = "lambda_ssm_sns"
-    roles = [aws_iam_role.lambda_role_ssm_sns.name]
-    policy_arn = aws_iam_policy.lambda_policy_ssm_sns.arn
-}
-
-output "lamba_ssm_sns_role_arn" {
-    value = aws_iam_role.lambda_role_ssm_sns.arn
+    roles = [aws_iam_role.lambda_role.name]
+    policy_arn = aws_iam_policy.lambda_policy.arn
 }
 
 
