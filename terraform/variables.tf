@@ -5,7 +5,7 @@ variable "email" {
 
 variable "slack_webhook_url" {
     type = string
-    default = "<<  --   YOUR SLACK WEBHOOK URL  --  >>"
+    default = "https://hooks.slack.com/services/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"
 }
 
 
