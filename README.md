@@ -38,8 +38,8 @@ The deploying user/role needs permissions for:
 
 1. **Clone and prepare**:
    ```bash
-   git clone <repository>
-   cd aws-security-alerting
+   git clone https://github.com/mr-good-cat06/AWS-Security-Alerting-Infrastructure.git
+   cd aws-security-alerting-infrastructure
    ```
 
 2. **Configure variables**:
