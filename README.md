@@ -36,21 +36,21 @@ The deploying user/role needs permissions for:
 
   ## Quick Start
 
-1. **Clone and prepare**:
+1. **Clone and prepare**
    ```bash
    git clone https://github.com/mr-good-cat06/AWS-Security-Alerting-Infrastructure.git
    cd aws-security-alerting-infrastructure
    ```
 
-2. **Configure variables**:
+2. **Configure variables**
 
-3. **Deploy infrastructure**:
+3. **Deploy infrastructure**
    ```bash
    terraform init
    terraform plan
    terraform apply
    ```
 
-4. **Confirm email subscription**:
+4. **Confirm email subscription**
    - Check your email for SNS subscription confirmation
    - Click the confirmation link
